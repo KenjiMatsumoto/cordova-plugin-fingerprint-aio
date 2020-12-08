@@ -10,7 +10,8 @@ public enum PluginError {
     BIOMETRIC_SCREEN_GUARD_UNSECURED(-110,
             "Go to 'Settings -> Security -> Screenlock' to set up a lock screen"),
     BIOMETRIC_LOCKED_OUT(-111),
-    BIOMETRIC_LOCKED_OUT_PERMANENT(-112);
+    BIOMETRIC_LOCKED_OUT_PERMANENT(-112),
+    BIOMETRIC_USER_CANCEL(-116);
 
     private int value;
     private String message;

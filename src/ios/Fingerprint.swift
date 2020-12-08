@@ -13,6 +13,7 @@ import LocalAuthentication
         case BIOMETRIC_DISMISSED = -108
         case BIOMETRIC_SCREEN_GUARD_UNSECURED = -110
         case BIOMETRIC_LOCKED_OUT = -111
+        case BIOMETRIC_USER_CANCEL = -116
     }
 
     struct ErrorCodes {
@@ -118,7 +119,8 @@ import LocalAuthentication
                         var errorResult: [String : Any] = ["code":  PluginError.BIOMETRIC_UNKNOWN_ERROR.rawValue, "message": error?.localizedDescription ?? ""];
 
                         errorCodes[1] = ErrorCodes(code: PluginError.BIOMETRIC_AUTHENTICATION_FAILED.rawValue)
-                        errorCodes[2] = ErrorCodes(code: PluginError.BIOMETRIC_DISMISSED.rawValue)
+                        errorCodes[2] = ErrorCodes(code: PluginError.BIOMETRIC_USER_CANCEL.rawValue)
+                        errorCodes[4] = ErrorCodes(code: PluginError.BIOMETRIC_DISMISSED.rawValue)
                         errorCodes[5] = ErrorCodes(code: PluginError.BIOMETRIC_SCREEN_GUARD_UNSECURED.rawValue)
                         errorCodes[6] = ErrorCodes(code: PluginError.BIOMETRIC_UNAVAILABLE.rawValue)
                         errorCodes[7] = ErrorCodes(code: PluginError.BIOMETRIC_NOT_ENROLLED.rawValue)

@@ -127,7 +127,7 @@ public class BiometricActivity extends AppCompatActivity {
                     showAuthenticationScreen();
                     return;
                 }
-                finishWithError(PluginError.BIOMETRIC_DISMISSED);
+                finishWithError(PluginError.BIOMETRIC_USER_CANCEL);
                 break;
             case BiometricPrompt.ERROR_LOCKOUT:
                 finishWithError(PluginError.BIOMETRIC_LOCKED_OUT.getValue(), errString.toString());
