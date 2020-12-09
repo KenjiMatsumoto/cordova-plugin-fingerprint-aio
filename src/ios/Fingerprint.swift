@@ -127,6 +127,9 @@ import LocalAuthentication
                         errorCodes[8] = ErrorCodes(code: PluginError.BIOMETRIC_LOCKED_OUT.rawValue)
 
                         let errorCode = abs(error!._code)
+                        print("---------------------------------")
+                        print(errorCode)
+                        print("---------------------------------")
                         if let e = errorCodes[errorCode] {
                            errorResult = ["code": e.code, "message": error!.localizedDescription];
                         }
